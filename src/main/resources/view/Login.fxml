@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginAnchorPane" prefHeight="448.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginController">
+   <children>
+      <ImageView fitHeight="570.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/loginBackground.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="172.0" layoutY="36.0" text="WELCOME" textFill="WHITE">
+         <font>
+            <Font name="Lucida Console" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="69.0" text="Play  Tech  Gang" textFill="WHITE">
+         <font>
+            <Font name="Rockwell" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="95.0" layoutY="334.0" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: white;" />
+      <Button layoutX="125.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #0F98CD;" text="JOIN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Circle fx:id="image" fill="WHITE" layoutX="200.0" layoutY="241.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="imageButton" layoutX="163.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnImageOnAction" style="-fx-background-color: transparent;" text="Add Image" textFill="#0f98cd">
+         <font>
+            <Font name="Corbel Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
