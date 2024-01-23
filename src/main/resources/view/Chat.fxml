@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ClientFormController">
+   <children>
+      <Pane prefHeight="46.0" prefWidth="500.0" style="-fx-background-color: #38ada9;">
+         <effect>
+            <DropShadow height="32.7" radius="7.675000000000001" width="0.0" />
+         </effect>
+         <children>
+            <Circle fx:id="circle" fill="WHITE" layoutX="30.0" layoutY="23.0" radius="16.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label fx:id="lblUserName" layoutX="56.0" layoutY="14.0" text="Name" />
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="384.0" layoutY="11.0" onMouseClicked="#modeOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/mode.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="448.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #38ada9;" text="Exit" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="554.0" prefHeight="46.0" prefWidth="500.0" style="-fx-background-color: #d1d8e0;">
+         <children>
+            <ImageView fx:id="emojiBtn" fitHeight="24.0" fitWidth="34.0" layoutX="13.0" layoutY="11.0" onMouseClicked="#emojiBtnOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/sendImoji.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgBtn" fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="11.0" onMouseClicked="#imgBtnOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/sendImage.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="448.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="46.0" prefWidth="52.0" style="-fx-background-radius: 0; -fx-background-color: #079992;" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="464.0" layoutY="13.0" onMouseClicked="#imgBtnOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/send.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtMessage" layoutX="92.0" layoutY="10.0" onAction="#txtMessageOnAction" prefHeight="25.0" prefWidth="319.0" promptText="Type a Message..." style="-fx-background-color: #d1d8e0;" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scrollPane" layoutY="46.0" prefHeight="478.0" prefWidth="500.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="467.0" prefWidth="480.0">
+               <children>
+                  <Pane fx:id="imagePane" prefHeight="467.0" prefWidth="502.0">
+                     <children>
+                        <ImageView fx:id="clickedImage" fitHeight="457.0" fitWidth="469.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Pane fx:id="emojiPane" layoutY="522.0" prefHeight="32.0" prefWidth="500.0" visible="false">
+         <children>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="13.0" layoutY="6.0" onMouseClicked="#laughOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/laughing.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="72.0" layoutY="6.0" onMouseClicked="#angryOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/angry.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="132.0" layoutY="6.0" onMouseClicked="#cryOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/crying.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="191.0" layoutY="6.0" onMouseClicked="#eyesWithHearrtOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/love.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="250.0" layoutY="6.0" onMouseClicked="#sadOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/sad.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="307.0" layoutY="6.0" onMouseClicked="#smileOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/shy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="363.0" layoutY="5.0" onMouseClicked="#wowOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/wow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="425.0" layoutY="5.0" onMouseClicked="#likeOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/lk/ijse/emoji/like.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

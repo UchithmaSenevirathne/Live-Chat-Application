@@ -41,19 +41,22 @@ public class LoginController {
     public static HashMap<String, Image> userLIst = new HashMap<>();
     public static Image image;
 
+
     @FXML
     void btnImageOnAction(ActionEvent event) {
         Window window = ((Node) (event.getSource())).getScene().getWindow();
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(window);
         event.consume();
-        try {
-            InputStream in = new FileInputStream(file);
-            image = new Image(in);
-            circle.setFill(new ImagePattern(image));
+        if (file != null) {
+            try {
+                InputStream in = new FileInputStream(file);
+                image = new Image(in);
+                circle.setFill(new ImagePattern(image));
 
-        } catch (FileNotFoundException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            } catch (FileNotFoundException e) {
+                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            }
         }
     }
 
@@ -71,7 +74,7 @@ public class LoginController {
                     /*Stage stage = new Stage();
                     stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ClientForm.fxml"))));
                     */
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ClientForm.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Chat.fxml"));
 
                     Parent rootNode = null;
                     try {
@@ -88,12 +91,13 @@ public class LoginController {
                     }else {
                         controller.circle.setFill(new ImagePattern(image));
                     }
+                    controller.lblUserName.setText(userName);
 
                     Scene scene = new Scene(rootNode);
                     Stage stage = new Stage();
                     stage.setScene(scene);
                     stage.setTitle("Chat Room");
-                    stage.initStyle(StageStyle.UNDECORATED);
+                    //stage.initStyle(StageStyle.UNDECORATED);
                     stage.show();
                     txtUserName.setText("");
                     circle.setFill(null);

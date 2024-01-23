@@ -32,7 +32,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Circle fx:id="image" fill="WHITE" layoutX="200.0" layoutY="241.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle" fill="WHITE" layoutX="200.0" layoutY="241.0" radius="50.0" stroke="WHITE" strokeType="INSIDE" style="-fx-fill: null;" />
       <Button fx:id="imageButton" layoutX="163.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnImageOnAction" style="-fx-background-color: transparent;" text="Add Image" textFill="#0f98cd">
          <font>
             <Font name="Corbel Bold" size="12.0" />
