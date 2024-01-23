@@ -1,4 +1,4 @@
-package lk.ijse.server;
+package lk.ijse.chatApp.server;
 
 import java.io.BufferedReader;
 import java.io.IOException;

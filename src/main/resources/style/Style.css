@@ -1,0 +1,113 @@
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.background{
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal{
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb{
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb:hover{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: transparent;
+}
+
+.receive-text {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-fill: #ffffff;
+}
+
+.receive-box {
+    -fx-background-color: #232525;
+    -fx-padding: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+    -fx-start-margin: 10px;
+}
+
+.send-box{
+    -fx-background-color: #6a89cc;
+    -fx-padding: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+    -fx-start-margin: 10px;
+}
+
+.send-text{
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-fill: #ffffff;
+}
+
+.join-text{
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+}
+
+.left-text{
+    -fx-text-fill:  #e63946;
+    -fx-font-size: 14px;
+}
+
+.time-text{
+    -fx-fill: #ffffff;
+    -fx-font-size: 10px;
+}
+
+.emoji_pane{
+    -fx-background-color: #2f3e46;
+    -fx-background-radius: 10;
+    -fx-border-width: 0 0 5 0;
+    -fx-border-color:  #57cc99;
+    -fx-border-radius: 10;
+}
+
+.image_pane{
+    -fx-background-color: rgba(100, 98, 98, 0.43);
+}
+
+.dark-text{
+    -fx-background-color:  #445159;
+    -fx-background-radius: 10px;
+}
+
+.light-text{
+    -fx-background-color: #079992;
+    -fx-background-radius: 10px;
+}

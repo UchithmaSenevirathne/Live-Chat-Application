@@ -1,4 +1,4 @@
-package lk.ijse.controller;
+package lk.ijse.chatApp.controller;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -48,7 +48,7 @@ public class ClientFormController {
     @FXML
     private ImageView clickedImage;
     
-    private String userName;
+    private static String userName;
 
     @FXML
     private TextField txtMessage;
@@ -58,6 +58,9 @@ public class ClientFormController {
 
     @FXML
     private Pane emojiPane;
+
+    @FXML
+    private ImageView img1,img2,img3,img4,img5,img6,img7,img8;
 
     private File file;
     private BufferedReader bufferedReader;
@@ -90,8 +93,24 @@ public class ClientFormController {
     void emojiBtnOnAction(MouseEvent event) {
         if (emojiPane.isVisible()){
             emojiPane.setVisible(false);
+            img1.setVisible(false);
+            img2.setVisible(false);
+            img3.setVisible(false);
+            img4.setVisible(false);
+            img5.setVisible(false);
+            img6.setVisible(false);
+            img7.setVisible(false);
+            img8.setVisible(false);
         }else {
             emojiPane.setVisible(true);
+            img1.setVisible(true);
+            img2.setVisible(true);
+            img3.setVisible(true);
+            img4.setVisible(true);
+            img5.setVisible(true);
+            img6.setVisible(true);
+            img7.setVisible(true);
+            img8.setVisible(true);
         }
     }
 
@@ -160,7 +179,8 @@ public class ClientFormController {
     }
 
     public void initialize() {
-        userName = lblUserName.getText();
+        userName = LoginController.userName;
+        System.out.println(userName);
 
         new Thread(() -> {
             try {
@@ -342,7 +362,7 @@ public class ClientFormController {
                             //add message
                             TextFlow tempFlow = new TextFlow();
                             Text text = new Text(message);
-                            text.setStyle("-fx-fill: white");
+                            text.setStyle("-fx-fill: #000000");
                             text.setWrappingWidth(200);
                             tempFlow.getChildren().add(text);
                             tempFlow.setMaxWidth(200);
@@ -387,7 +407,7 @@ public class ClientFormController {
                             //add message
                             TextFlow tempFlow = new TextFlow();
                             Text text = new Text(message);
-                            text.setStyle("-fx-fill: white");
+                            text.setStyle("-fx-fill: #ffffff");
                             text.setWrappingWidth(200);
                             tempFlow.getChildren().add(text);
                             tempFlow.setMaxWidth(200);

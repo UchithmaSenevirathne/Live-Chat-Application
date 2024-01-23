@@ -1,4 +1,4 @@
-package lk.ijse.controller;
+package lk.ijse.chatApp.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +15,6 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
 import java.io.*;
@@ -61,7 +60,7 @@ public class LoginController {
     }
 
     @FXML
-    void btnLoginOnAction(ActionEvent event) {
+    void btnLoginOnAction(ActionEvent event) throws IOException {
         if(!txtUserName.getText().equals("")) {
 
             userName = txtUserName.getText();
@@ -93,15 +92,10 @@ public class LoginController {
                     }
                     controller.lblUserName.setText(userName);
 
-                    Scene scene = new Scene(rootNode);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.setTitle("Chat Room");
-                    //stage.initStyle(StageStyle.UNDECORATED);
+                    Stage stage = (Stage) txtUserName.getScene().getWindow();
+                    stage.setScene(new Scene(rootNode));
+                    stage.setTitle(userName + "'s chat");
                     stage.show();
-                    txtUserName.setText("");
-                    circle.setFill(null);
-                    image = null;
             }
         }else
             new Alert(Alert.AlertType.ERROR, "Please enter your name!").show();
