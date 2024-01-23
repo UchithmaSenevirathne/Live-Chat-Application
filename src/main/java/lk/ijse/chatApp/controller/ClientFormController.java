@@ -59,9 +59,6 @@ public class ClientFormController {
     @FXML
     private Pane emojiPane;
 
-    @FXML
-    private ImageView img1,img2,img3,img4,img5,img6,img7,img8;
-
     private File file;
     private BufferedReader bufferedReader;
     private static PrintWriter writer;
@@ -91,27 +88,7 @@ public class ClientFormController {
 
     @FXML
     void emojiBtnOnAction(MouseEvent event) {
-        if (emojiPane.isVisible()){
-            emojiPane.setVisible(false);
-            img1.setVisible(false);
-            img2.setVisible(false);
-            img3.setVisible(false);
-            img4.setVisible(false);
-            img5.setVisible(false);
-            img6.setVisible(false);
-            img7.setVisible(false);
-            img8.setVisible(false);
-        }else {
-            emojiPane.setVisible(true);
-            img1.setVisible(true);
-            img2.setVisible(true);
-            img3.setVisible(true);
-            img4.setVisible(true);
-            img5.setVisible(true);
-            img6.setVisible(true);
-            img7.setVisible(true);
-            img8.setVisible(true);
-        }
+        emojiPane.setVisible(!emojiPane.isVisible());
     }
 
     @FXML
@@ -140,7 +117,8 @@ public class ClientFormController {
 
     @FXML
     void angryOnAction(MouseEvent event) {
-
+        String emoji = new String(Character.toChars(128544));
+        txtMessage.appendText(emoji);
     }
 
     @FXML

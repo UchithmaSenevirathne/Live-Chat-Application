@@ -91,10 +91,9 @@
 }
 
 .emoji_pane{
-    -fx-background-color: #2f3e46;
+    -fx-background-color: #e7e7e7;
     -fx-background-radius: 10;
     -fx-border-width: 0 0 5 0;
-    -fx-border-color:  #57cc99;
     -fx-border-radius: 10;
 }
 
