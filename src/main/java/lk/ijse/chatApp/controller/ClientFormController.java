@@ -12,13 +12,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 import java.net.Socket;
 
@@ -27,8 +24,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class ClientFormController {
-    @FXML
-    private AnchorPane anchorPane;
     @FXML
     public Circle circle;
 
@@ -58,15 +53,6 @@ public class ClientFormController {
     private BufferedReader bufferedReader;
     private static PrintWriter writer;
     private String finalName;
-
-    Stage stage;
-
-
-    @FXML
-    void btnExitOnAction(ActionEvent event) {
-        stage = (Stage) anchorPane.getScene().getWindow();
-        stage.close();
-    }
 
     @FXML
     void btnSendOnAction(ActionEvent event) {
@@ -316,22 +302,7 @@ public class ClientFormController {
                                 vBox.getChildren().add(hBox1);
                             });
                         }
-                    }else if(firstChars.equalsIgnoreCase("lef")){
-                        //adding name of client which left the chat
-                        Label text = new Label(finalName+" has left the chat");
-                        text.getStyleClass().add("left-text");
-                        HBox hBox = new HBox();
-                        hBox.getChildren().add(text);
-                        hBox.setAlignment(Pos.CENTER);
-
-                        Platform.runLater(() -> {
-                            vBox.getChildren().add(hBox);
-
-                            HBox hBox1 = new HBox();
-                            hBox1.setPadding(new Insets(5, 5, 5, 10));
-                            vBox.getChildren().add(hBox1);
-                        });
-                    } else{
+                    }else{
                         if(name.equalsIgnoreCase(userName)){
 
                             //add message

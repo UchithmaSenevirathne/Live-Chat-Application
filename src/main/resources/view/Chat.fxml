@@ -37,7 +37,7 @@
                </image>
             </ImageView>
             <Button layoutX="448.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="46.0" prefWidth="52.0" style="-fx-background-radius: 0; -fx-background-color: #4a69bd;" />
-            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="464.0" layoutY="13.0" onMouseClicked="#imgBtnOnAction" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="464.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/send.png" />
                </image>
