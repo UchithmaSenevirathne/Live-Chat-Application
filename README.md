@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=32&vCenter=true&width=760&lines=Group+Chat+Application;)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=32&vCenter=true&width=760&lines=Chat+Application;)](https://git.io/typing-svg)
 
 💠 This Javafx application is developed for Introduction to Network Programming module final assignment.
 
