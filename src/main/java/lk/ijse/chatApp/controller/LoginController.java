@@ -46,7 +46,7 @@ public class LoginController {
     }
 
     @FXML
-    void btnLoginOnAction(ActionEvent event) throws IOException {
+    void btnLoginOnAction(ActionEvent event){
         if(!txtUserName.getText().equals("")) {
 
             userName = txtUserName.getText();
@@ -61,14 +61,17 @@ public class LoginController {
                     }
 
                     ClientFormController controller = loader.getController();
+                    if(image == null){
+                        new Alert(Alert.AlertType.ERROR, "add profile photo").show();
+                    }else {
+                        controller.circle.setFill(new ImagePattern(image));
+                        controller.lblUserName.setText(userName);
 
-                    controller.circle.setFill(new ImagePattern(image));
-                    controller.lblUserName.setText(userName);
-
-                    Stage stage = (Stage) txtUserName.getScene().getWindow();
-                    stage.setScene(new Scene(rootNode));
-                    stage.setTitle(userName + "'s chat");
-                    stage.show();
+                        Stage stage = (Stage) txtUserName.getScene().getWindow();
+                        stage.setScene(new Scene(rootNode));
+                        stage.setTitle(userName + "'s chat");
+                        stage.show();
+                    }
         }else
             new Alert(Alert.AlertType.ERROR, "Please enter your name!").show();
     }
