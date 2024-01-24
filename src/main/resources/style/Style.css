@@ -50,7 +50,7 @@
 }
 
 .receive-box {
-    -fx-background-color: #232525;
+    -fx-background-color: #3c6382;
     -fx-padding: 8;
     -fx-border-radius: 8;
     -fx-background-radius: 8;
@@ -72,7 +72,7 @@
 .send-text{
     -fx-font-size: 12;
     -fx-font-weight: bold;
-    -fx-fill: #ffffff;
+    -fx-fill: #000000;
 }
 
 .join-text{

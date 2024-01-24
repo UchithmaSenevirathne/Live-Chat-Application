@@ -12,6 +12,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -29,12 +31,6 @@ public class ClientFormController {
     private AnchorPane anchorPane;
     @FXML
     public Circle circle;
-
-    @FXML
-    private ImageView emojiBtn;
-
-    @FXML
-    private ImageView imgBtn;
 
     @FXML
     private ScrollPane scrollPane;
@@ -58,7 +54,6 @@ public class ClientFormController {
 
     @FXML
     private Pane emojiPane;
-
     private File file;
     private BufferedReader bufferedReader;
     private static PrintWriter writer;
@@ -100,14 +95,9 @@ public class ClientFormController {
         fileChooser.getExtensionFilters().add(imageFilter);
         file = fileChooser.showOpenDialog(txtMessage.getScene().getWindow());
         if (file != null){
-            txtMessage.setText("1 image selected");
+            txtMessage.setText("image selected");
             txtMessage.setEditable(false);
         }
-    }
-
-    @FXML
-    void modeOnAction(MouseEvent event) {
-
     }
 
     @FXML
@@ -347,7 +337,7 @@ public class ClientFormController {
                             //add message
                             TextFlow tempFlow = new TextFlow();
                             Text text = new Text(message);
-                            text.setStyle("-fx-fill: #000000");
+                            text.setStyle("-fx-fill: #ffffff");
                             text.setWrappingWidth(200);
                             tempFlow.getChildren().add(text);
                             tempFlow.setMaxWidth(200);
@@ -440,5 +430,4 @@ public class ClientFormController {
             }
         }).start();
     }
-
 }
