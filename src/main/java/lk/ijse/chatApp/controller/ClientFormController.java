@@ -117,43 +117,50 @@ public class ClientFormController {
 
     @FXML
     void angryOnAction(MouseEvent event) {
-        String emoji = new String(Character.toChars(128544));
-        txtMessage.appendText(emoji);
+        txtMessage.appendText("\uD83D\uDE21");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void cryOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDE2D");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void eyesWithHearrtOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDE0D");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void laughOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDE02");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void likeOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDC4D");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void sadOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDE14");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void smileOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDE0A");
+        emojiPane.setVisible(false);
     }
 
     @FXML
     void wowOnAction(MouseEvent event) {
-
+        txtMessage.appendText("\uD83D\uDE2E");
+        emojiPane.setVisible(false);
     }
 
     public void initialize() {
